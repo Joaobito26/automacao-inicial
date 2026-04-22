@@ -14,8 +14,8 @@ test('Deve iniciar e finalizar com sucesso o cadastro de usuário', async ({ pag
   await signupPage.irParaLoginSignup();
   await signupPage.criarNovoCadastro('João Silva', emailRandom);
 
-  // Asserção: Verifica se chegamos na página de detalhes da conta
-  await expect(page.locator('b', { hasText: 'Enter Account Information' })).toBeVisible();
+  // Verifica se chegamos na página de detalhes da conta
+  await expect(page).toHaveURL('https://automationexercise.com/signup');
 
-  await signupPage.preencherFormularioCadastro({ nome: 'João Silva', email: emailRandom });
+  await signupPage.preencherFormularioCadastro();
 });
