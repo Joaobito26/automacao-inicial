@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { SignupLoginPage } from './seletores.page';
+import { SignupLoginPage } from '../seletores.page';
 
 test('Deve iniciar e finalizar com sucesso o cadastro de usuário', async ({ page }) => {
   const signupPage = new SignupLoginPage(page);
